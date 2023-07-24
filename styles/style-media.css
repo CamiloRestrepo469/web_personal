@@ -1,0 +1,255 @@
+/* Estilos comunes para todas las pantallas */
+
+/* Media query para pantallas más pequeñas (máximo 767px de ancho) */
+@media screen and (max-width: 767px) {
+
+    /* Agregar aquí los estilos específicos para pantallas pequeñas */
+    /* Por ejemplo, ajustar tamaños de fuente, márgenes, padding, etc. */
+    /* También puedes ocultar elementos que no son relevantes para pantallas pequeñas */
+    /* Ejemplo: */
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 2rem 0 0;
+        /* Reducir el padding del encabezado en pantallas pequeñas */
+    }
+
+    .nav .nav-item {
+        display: block;
+        /* Mostrar los elementos de navegación como bloques en pantallas pequeñas */
+        margin: 1rem 0;
+        /* Ajustar los márgenes de los elementos de navegación */
+    }
+
+    .header-logo {
+        position: static;
+        /* Cambiar la posición del logo en pantallas pequeñas */
+    }
+
+    /* Estilos para los pseudo elementos before de nav-link dentro de nav */
+    .nav .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-white);
+        width: 0;
+        height: 2%;
+    }
+
+    /* Estilos para los pseudo elementos before de nav-link cuando nav-item está en hover y dentro de nav */
+    .nav .nav-item:hover .nav-link::before {
+        background-color: var(--color-primary);
+        width: 100%;
+        height: 15px;
+        /* Cambiar a 600ms (0.6 segundos) o el valor que desees */
+        transition-duration: 6000ms;
+    }
+
+    .col-1-2 {
+        display: 0;
+        padding: 0;
+        margin: 1;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .col-1-2 img {
+        align-self: flex-start;
+
+    }
+
+    .col-1-2 p {
+        text-align: right;
+        padding-left: 15%;
+    }
+
+    .col-1-2 h3 {
+        /* Estilos para los h3 dentro de .col-1-2 en pantallas medianas y grandes */
+        /* Coloca los h3 en la parte superior */
+        order: -1;
+        text-align: right;
+    }
+
+    .col-1-2 img {
+        background-position: center bottom;
+        /* Ajusta la posición de la imagen de fondo hacia el centro en el eje horizontal y hacia la parte inferior en el eje vertical */
+    }
+
+}
+
+/* Media query para pantallas medianas (entre 768px y 991px de ancho) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* Agregar aquí los estilos específicos para pantallas medianas */
+    /* Ejemplo: */
+    .container {
+        width: 90%;
+        /* Reducir el ancho del contenedor principal en pantallas medianas */
+        margin: 0 auto;
+        /* Centrar el contenedor en la pantalla */
+    }
+
+    .nav .nav-item {
+        margin: 0 0.1rem;
+        /* Ajustar los márgenes de los elementos de navegación en pantallas medianas */
+        text-align: right;
+        padding: 12 0 0 10;
+    }
+
+    /* Estilos para el menú en pantallas medianas y grandes */
+    .navbar-menu {
+        float: right;
+        /* Alinear el menú a la derecha en pantallas medianas y grandes */
+        display: block;
+        /* Mostrar el menú en pantallas medianas y grandes */
+    }
+
+    /* Estilos para el logo en pantallas medianas y grandes */
+    .header-logo {
+        position: var(--header-logo-position);
+        /* Restablecer la posición del logo en pantallas medianas y grandes */
+    }
+
+
+    /* Estilos para el logo en pantallas pequeñas */
+    .header-logo {
+        position: static;
+        /* Cambiar la posición del logo en pantallas pequeñas */
+    }
+
+    /* Estilos para los pseudo elementos before de nav-link dentro de nav */
+    .nav .nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-white);
+        width: 0;
+        height: 2%;
+    }
+
+    /* Estilos para los pseudo elementos before de nav-link cuando nav-item está en hover y dentro de nav */
+    .nav .nav-item:hover .nav-link::before {
+        background-color: var(--color-primary);
+        width: 100%;
+        height: 15px;
+        /* Cambiar a 600ms (0.6 segundos) o el valor que desees */
+        transition-duration: 6000ms;
+    }
+
+    .col-1-2 {
+        display: 0;
+        padding: 0;
+        margin: 1;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .col-1-2 img {
+        align-self: flex-start;
+
+    }
+
+    .col-1-2 p {
+        text-align: right;
+        padding-left: 15%;
+    }
+
+    .col-1-2 h3 {
+        /* Estilos para los h3 dentro de .col-1-2 en pantallas medianas y grandes */
+        /* Coloca los h3 en la parte superior */
+        order: -1;
+        text-align: right;
+    }
+
+    .col-1-2 img {
+        background-position: center bottom;
+        /* Ajusta la posición de la imagen de fondo hacia el centro en el eje horizontal y hacia la parte inferior en el eje vertical */
+    }
+
+    /* Estilos para la imagen en la clase .col-1-2 */
+    .col-1-2 img {
+        max-width: 100%;
+        height: 600px;
+        display: block;
+        transition: transform 0.3s ease;
+        /* Agrega una transición de 0.3 segundos al efecto de transformación */
+        /* Agregar margen inferior para separar las imágenes */
+        margin-bottom: 20px;
+        /* Agregar sombra para el efecto de flotante */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        border-radius: 15px;
+    }
+
+    /* Efecto de movimiento en el hover de la imagen */
+    .col-1-2 img:hover {
+        transform: scale(1.1);
+        /* Aplica una escala de 1.1 a la imagen cuando el cursor está sobre ella */
+        opacity: 0.5;
+    }
+
+    /* Estilos para la clase .col-1-3 */
+    .media-latest {
+        /* Agregar margen entre las imágenes */
+        margin: 0px;
+    }
+
+    /* Estilos para la imagen en la clase .col-1-3 */
+    .media-latest {
+        max-width: 100%;
+        height: 190px;
+        display: block;
+        transition: transform 0.3s ease;
+        /* Agregar sombra para el efecto de flotante */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+    }
+
+    /* Efecto de movimiento en el hover de la imagen */
+    .media-latest:hover {
+        transform: scale(0.95);
+        opacity: 0.5;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* id="testt" */
+
+    /* Estilos para la imagen en la clase .col-1-3 */
+    #testt {
+        transition: transform 0.3s ease;
+        /* Agregar sombra para el efecto de flotante */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        
+    }
+
+    /* Efecto de movimiento en el hover de la imagen */
+    #testt:hover {
+        transform: scale(1.2);
+        background-color: rgba(0, 0, 0, 0.7);
+       
+    }
+
+
+
+}
+
+/* Media query para pantallas grandes (mínimo 992px de ancho) */
+@media screen and (min-width: 992px) {
+
+    /* Agregar aquí los estilos específicos para pantallas grandes */
+    /* Ejemplo: */
+    .container {
+        width: 960px;
+        /* Establecer el ancho del contenedor principal en pantallas grandes */
+        margin: 0 auto;
+        /* Centrar el contenedor en la pantalla */
+    }
+
+    .nav .nav-item {
+        margin: 0 2rem;
+        /* Ajustar los márgenes de los elementos de navegación en pantallas grandes */
+    }
+}
