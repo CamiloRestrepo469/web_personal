@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
     line-height: 1.15;
     /* 1 */
     -webkit-text-size-adjust: 100%;
@@ -336,7 +336,7 @@ template {
     /*crear custom*/
     --transition-duration: 0.3s;
     --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
-  
+
 }
 
 
@@ -500,6 +500,17 @@ a:active {
     transition-duration: 6000ms;
 }
 
+/* Estilo para ocultar la lista desplegable inicialmente */
+.dropdown-list {
+    display: none;
+}
+
+/* Estilo para mostrar la lista desplegable cuando el elemento tiene la clase 'show' */
+.has-dropdown.show .dropdown-list {
+    display: block;
+}
+
+
 /* Estilos para todas las ul con la clase .row */
 ul.row {
     margin: 0;
@@ -560,7 +571,7 @@ h6 {
 /* Estilos para todas las ul dentro de la clase .footer */
 .footer ul {
     text-align: right;
-    
+
 }
 
 /* Crea una nueva fila después de cada instancia de la clase .row */
@@ -674,10 +685,10 @@ h6 {
 /* Estilos para card-quote dentro de card-testimonial */
 .card-testimonial .card-quote {
     position: relative;
-  }
-  
-  /* Estilos para el pseudo elemento before de card-quote dentro de card-testimonial */
-  .card-testimonial .card-quote::before {
+}
+
+/* Estilos para el pseudo elemento before de card-quote dentro de card-testimonial */
+.card-testimonial .card-quote::before {
     content: "\201C";
     position: absolute;
     top: -4.5rem;
@@ -685,8 +696,8 @@ h6 {
     color: #efeded;
     font-size: 10rem;
     z-index: -1;
-  }
-  
+}
+
 /*
   Con estos estilos, hemos agregado el selector .section-hero para establecer el tamaño del fondo con una sintaxis de 2 valores, donde el ancho es de 90 rem (1 rem equivale a 10 px) y la altura se ajusta automáticamente. Luego, hemos seleccionado el selector .section-title dentro de .section-hero para agregar un margen de 5 rem en la parte inferior. Finalmente, hemos seleccionado el selector .section-inner dentro de .section-hero para agregar relleno de 10 rem en la parte superior, 40 rem en el lado derecho, 2 rem en la parte inferior y 0 en el lado izquierdo, todo en una sola regla.
 
@@ -737,96 +748,96 @@ h6 {
 .card-work .card-outer {
     position: relative;
     overflow: hidden;
-  }
-  
-  /* Estilos para la imagen dentro de card-image dentro de card-work */
-  .card-work .card-image img {
+}
+
+/* Estilos para la imagen dentro de card-image dentro de card-work */
+.card-work .card-image img {
     height: 30rem;
     width: 100%;
     object-fit: cover;
     vertical-align: bottom;
     border-radius: 15px;
-  }
-  
-  /* Estilos para card-inner dentro de card-work */
-  .card-work .card-inner {
+}
+
+/* Estilos para card-inner dentro de card-work */
+.card-work .card-inner {
     position: absolute;
     top: -0.1rem;
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
-  }
-  
-  /* Estilos para card-inner cuando card-work está en hover */
-  .card-work:hover .card-inner {
+}
+
+/* Estilos para card-inner cuando card-work está en hover */
+.card-work:hover .card-inner {
     background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Estilos para card-title dentro de card-work */
-  .card-work .card-title {
+}
+
+/* Estilos para card-title dentro de card-work */
+.card-work .card-title {
     text-align: center;
     margin: 0;
     opacity: 0.1;
     height: 100%;
     position: relative;
-  }
-  
-  /* Estilos para el enlace dentro de card-title y card-work */
-  .card-work .card-title a {
+}
+
+/* Estilos para el enlace dentro de card-title y card-work */
+.card-work .card-title a {
     display: block;
     text-decoration: none;
     padding-top: 45%;
-  }
-  
-  /* Crear pseudo elementos after para el enlace dentro de card-title y card-work */
-  .card-work .card-title a::after {
+}
+
+/* Crear pseudo elementos after para el enlace dentro de card-title y card-work */
+.card-work .card-title a::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-  }
-  
-  /* Estilos para card-title cuando card-work está en hover */
-  .card-work:hover .card-title {
+}
+
+/* Estilos para card-title cuando card-work está en hover */
+.card-work:hover .card-title {
     opacity: 1;
-  }
+}
 
-  /*animamcion*/
+/*animamcion*/
 
-  /* Transformaciones en card-work */
-  .card-work:hover .card-image {
+/* Transformaciones en card-work */
+.card-work:hover .card-image {
     transform: scale(1.2);
     border-radius: 15px;
-  }
-  
-  .card-work:hover .card-outer {
+}
+
+.card-work:hover .card-outer {
     transform: scale(0.95);
     border-radius: 15px;
-  }
-  
-  /* Animaciones en los elementos de navegación */
-  .nav .nav-link::before {
+}
+
+/* Animaciones en los elementos de navegación */
+.nav .nav-link::before {
     transition: var(--transition-duration) var(--transition-cubic-bezier);
-  }
-  
-  /* Transiciones en los card-works */
-  .card-work .card-image {
+}
+
+/* Transiciones en los card-works */
+.card-work .card-image {
     transition: var(--transition-duration) var(--transition-cubic-bezier);
-  }
-  
-  .card-work .card-inner {
+}
+
+.card-work .card-inner {
     transition: var(--transition-duration) var(--transition-cubic-bezier);
-  }
-  
-  /* Transiciones en el hover del botón */
-  .button:hover {
+}
+
+/* Transiciones en el hover del botón */
+.button:hover {
     transition-duration: var(--transition-duration);
     transition-property: color, background-color;
-  }
-  
-  /*
+}
+
+/*
   Explicación línea por línea:
 
  Crear custom properties `: Esta línea es un comentario que indica que se van a definir propiedades personalizadas (variables) en el siguiente bloque de código.

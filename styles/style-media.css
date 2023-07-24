@@ -140,6 +140,27 @@
         transition-duration: 6000ms;
     }
 
+    /* Estilo para ocultar la lista desplegable inicialmente */
+    .dropdown-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        /* Colocar la lista debajo del elemento padre */
+        left: 0;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* Estilo para mostrar la lista desplegable cuando el elemento tiene la clase 'show' */
+    .has-dropdown.show .dropdown-list {
+        display: block;
+    }
+
+
+
     .col-1-2 {
         display: 0;
         padding: 0;
@@ -222,14 +243,14 @@
         transition: transform 0.3s ease;
         /* Agregar sombra para el efecto de flotante */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-        
+
     }
 
     /* Efecto de movimiento en el hover de la imagen */
     #testt:hover {
         transform: scale(1.2);
         background-color: rgba(0, 0, 0, 0.7);
-       
+
     }
 
 
